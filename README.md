@@ -3,65 +3,78 @@
 </p>
 
 <p align="center">
-  <a href="https://zx2002430.github.io/Personal-Homepage/"><img src="https://img.shields.io/badge/Website-Research%20Portfolio-0a0f1f?style=for-the-badge&logo=googlechrome&logoColor=8ee7ff" alt="Research portfolio" /></a>
-  <a href="mailto:2531711658@qq.com"><img src="https://img.shields.io/badge/Contact-Email-0a0f1f?style=for-the-badge&logo=gmail&logoColor=ff8b8b" alt="Email Xun Zhao" /></a>
+  <a href="https://zx2002430.github.io/Personal-Homepage/"><img src="https://img.shields.io/badge/🌐_Portfolio-0b1220?style=for-the-badge&logo=googlechrome&logoColor=8ee7ff" alt="Portfolio" /></a>
+  <a href="https://orcid.org/0009-0002-6842-4689"><img src="https://img.shields.io/badge/ORCID-0b1220?style=for-the-badge&logo=orcid&logoColor=a6ce39" alt="ORCID" /></a>
+  <a href="mailto:2531711658@qq.com"><img src="https://img.shields.io/badge/Email-0b1220?style=for-the-badge&logo=gmail&logoColor=ff8b8b" alt="Email Xun Zhao" /></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Robotics-0b1220?style=flat-square&logo=ros&logoColor=8ee7ff" alt="Robotics" />
-  <img src="https://img.shields.io/badge/Embodied%20AI-0b1220?style=flat-square&logo=pytorch&logoColor=ff8b8b" alt="Embodied AI" />
-  <img src="https://img.shields.io/badge/Sim--to--Real-0b1220?style=flat-square&logo=mujoco&logoColor=b2ffb2" alt="Sim to Real" />
-  <img src="https://img.shields.io/badge/Multi--Agent%20RL-0b1220?style=flat-square&logo=openai&logoColor=f5d76e" alt="Multi-Agent Reinforcement Learning" />
-  <img src="https://img.shields.io/badge/Vision--Language--Action-0b1220?style=flat-square&logo=opencv&logoColor=c3a6ff" alt="Vision Language Action" />
+  <img src="https://img.shields.io/badge/Robotics-101828?style=flat-square&logo=ros&logoColor=8ee7ff" alt="Robotics" />
+  <img src="https://img.shields.io/badge/Embodied%20AI-101828?style=flat-square&logo=pytorch&logoColor=ff8b8b" alt="Embodied AI" />
+  <img src="https://img.shields.io/badge/Sim--to--Real-101828?style=flat-square&logo=mujoco&logoColor=b2ffb2" alt="Sim to Real" />
+  <img src="https://img.shields.io/badge/Multi--Agent%20RL-101828?style=flat-square&logo=openai&logoColor=f5d76e" alt="Multi-Agent Reinforcement Learning" />
 </p>
 
-## Hi, I'm Xun Zhao 👋
+## 👋 Hi, I'm Xun Zhao
 
-I build **robot learning systems that can leave simulation**. My work sits at the intersection of embodied intelligence, multi-agent reinforcement learning, robot perception, and real-world control.
+<img align="right" width="47%" src="https://github-readme-stats.vercel.app/api?username=zx2002430&show_icons=true&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e&icon_color=58a6ff" alt="Xun Zhao's GitHub statistics" />
 
-目前专注于让机器人在复杂、动态的共享空间中做到：**看得见、学得快、动得稳**。
+I am an **AI and robotics researcher** interested in making learned policies work beyond a simulation demo.
 
-| 🔭 Building | 🧠 Exploring | ⚙️ Shipping |
+- 🤖 Building coordinated robot systems for dynamic, shared workspaces
+- 🧠 Exploring embodied intelligence, VLA, meta-learning, and multi-agent RL
+- 🔭 Turning MuJoCo experiments into ROS 2-enabled real-robot deployments
+- 📍 Working from China · always open to thoughtful research conversations
+
+<br clear="right" />
+
+## 🧩 Research map
+
+| Perception | Learning | Deployment |
 | :-- | :-- | :-- |
-| Dual-arm robot coordination | VLA & embodied intelligence | ROS 2 + MuJoCo sim-to-real stacks |
+| RGB-D · YOLO · Calibration | PPO · Meta-RL · MARL · VLA | UR5 · ROS 2 · MoveIt · MuJoCo |
 
-## Selected work
+```text
+perceive the world  →  learn to adapt  →  act safely in the world
+```
 
-### 🤖 Dual-Arm UR5 · Dynamic Navigation
+## 🛠️ Tools I enjoy using
 
-**DM-NAV** is a dual-arm research platform for coordinated motion and dynamic-obstacle avoidance. It connects task generation, multi-agent policy learning, RGB-D perception, and real-robot control in one sim-to-real loop.
-
-- **Learning:** meta multi-agent reinforcement learning for rapid task adaptation
-- **Perception:** RGB-D sensing, object localization, and calibration-aware state estimation
-- **Deployment:** MuJoCo → ROS 2 / MoveIt → dual UR5 hardware
-
-<p>
-  <a href="https://zx2002430.github.io/Personal-Homepage/dual-ur5.html"><img src="https://img.shields.io/badge/Explore%20the%20system-8ee7ff?style=for-the-badge&logo=robotframework&logoColor=06101b" alt="Explore the Dual-Arm UR5 system" /></a>
-  <a href="https://zx2002430.github.io/Personal-Homepage/"><img src="https://img.shields.io/badge/View%20portfolio-1c273c?style=for-the-badge&logo=githubpages&logoColor=ffffff" alt="View portfolio" /></a>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,cpp,pytorch,opencv,linux,ubuntu,docker,git,github,cmake,vscode&theme=dark&perline=11" alt="Python, C++, PyTorch, OpenCV, Linux, Ubuntu, Docker, Git, GitHub, CMake, and VS Code" />
 </p>
 
-## Technical radar
+<p align="center">
+  <img src="https://img.shields.io/badge/Robotics-UR5%20%7C%20ROS%202%20%7C%20MoveIt-1f2937?style=for-the-badge&logo=robotframework&logoColor=8ee7ff" alt="UR5, ROS 2, MoveIt" />
+  <img src="https://img.shields.io/badge/Simulation-MuJoCo%20%7C%20Gymnasium-1f2937?style=for-the-badge&logo=python&logoColor=b2ffb2" alt="MuJoCo and Gymnasium" />
+</p>
 
-```text
-Perception      RGB-D · YOLO · Calibration · State Estimation
-Learning        PPO · Multi-Agent RL · Meta-Learning · VLA
-Robotics        UR5 · ROS 2 · MoveIt · ros2_control
-Simulation      MuJoCo · Gymnasium · Digital Twins
-Engineering     Python · PyTorch · C++ · Linux
-```
+## 🚀 Featured work
 
-## What I care about
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Dual-Arm UR5 · DM-NAV</h3>
+      <p>Coordinated dual-arm navigation with dynamic obstacle avoidance, RGB-D perception, and sim-to-real deployment.</p>
+      <a href="https://zx2002430.github.io/Personal-Homepage/dual-ur5.html"><img src="https://img.shields.io/badge/Explore%20the%20system-8ee7ff?style=for-the-badge&logo=robotframework&logoColor=06101b" alt="Explore Dual-Arm UR5" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Unitree Z1 · Visual Manipulation</h3>
+      <p>A MuJoCo-based hierarchical SAC baseline for pick-and-place with wrist RGB-D perception.</p>
+      <a href="https://github.com/zx2002430/Unitree_z1_reserach"><img src="https://img.shields.io/badge/View%20repository-c3a6ff?style=for-the-badge&logo=github&logoColor=06101b" alt="View Unitree Z1 repository" /></a>
+    </td>
+  </tr>
+</table>
 
-```text
-simulated success ──► reliable behavior ──► useful physical systems
-```
+## 📫 Let’s connect
 
-I enjoy research problems where an elegant learning method must earn its place on a real machine: noisy sensors, safety boundaries, imperfect calibration, and all.
-
-## Connect
-
-- Portfolio: [zx2002430.github.io/Personal-Homepage](https://zx2002430.github.io/Personal-Homepage/)
-- Email: [2531711658@qq.com](mailto:2531711658@qq.com)
+<p align="center">
+  <a href="https://zx2002430.github.io/Personal-Homepage/">Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="https://orcid.org/0009-0002-6842-4689">ORCID</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:2531711658@qq.com">Email</a>
+</p>
 
 <p align="center">
   <sub>Fusing perception, learning, and control for robots in the real world.</sub>
