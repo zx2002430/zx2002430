@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+  <title id="title">Xun Zhao — Robotics and Embodied Intelligence</title>
+  <desc id="desc">A dark animated banner with robotic arms, orbital paths, and the text Robotics, Embodied Intelligence, Sim to Real.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06101b"/>
+      <stop offset="52%" stop-color="#0b1c31"/>
+      <stop offset="100%" stop-color="#17102b"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8ee7ff"/>
+      <stop offset="100%" stop-color="#4aa9ff"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c3a6ff"/>
+      <stop offset="100%" stop-color="#8d6dff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#46dffb" stop-opacity=".32"/>
+      <stop offset="100%" stop-color="#46dffb" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+    <style>
+      .pulse { animation: pulse 3.2s ease-in-out infinite; transform-origin: 720px 210px; }
+      .dash { animation: dash 12s linear infinite; }
+      .orbit { animation: orbit 8s linear infinite; transform-origin: 720px 210px; }
+      .orbit2 { animation: orbit2 11s linear infinite; transform-origin: 720px 210px; }
+      @keyframes pulse { 50% { opacity: .55; transform: scale(1.12); } }
+      @keyframes dash { to { stroke-dashoffset: -280; } }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes orbit2 { to { transform: rotate(-360deg); } }
+    </style>
+  </defs>
+
+  <rect width="1440" height="420" fill="url(#background)"/>
+  <circle class="pulse" cx="720" cy="210" r="230" fill="url(#glow)" filter="url(#blur)"/>
+
+  <g fill="none" opacity=".38">
+    <path class="dash" d="M-40 315 C210 190 360 425 605 295 S1010 70 1480 162" stroke="url(#cyan)" stroke-width="1.5" stroke-dasharray="7 13"/>
+    <path class="dash" d="M-20 123 C260 13 383 263 593 161 S1084 365 1470 256" stroke="url(#violet)" stroke-width="1.5" stroke-dasharray="7 13"/>
+  </g>
+
+  <g class="orbit" fill="none" stroke="#8ee7ff" opacity=".22">
+    <ellipse cx="720" cy="210" rx="315" ry="88" stroke-width="1"/>
+    <circle cx="1017" cy="209" r="5" fill="#8ee7ff" stroke="none"/>
+  </g>
+  <g class="orbit2" fill="none" stroke="#c3a6ff" opacity=".2">
+    <ellipse cx="720" cy="210" rx="240" ry="62" stroke-width="1" transform="rotate(52 720 210)"/>
+    <circle cx="856" cy="17" r="4" fill="#c3a6ff" stroke="none"/>
+  </g>
+
+  <g transform="translate(118 78)" fill="none" stroke="url(#cyan)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 208 L81 171 L137 213 L214 171" stroke-width="8"/>
+    <path d="M81 171 L104 93 L186 74 L214 171" stroke-width="11"/>
+    <path d="M104 93 L157 130" stroke-width="11"/>
+    <circle cx="81" cy="171" r="13" fill="#06101b" stroke-width="5"/>
+    <circle cx="104" cy="93" r="13" fill="#06101b" stroke-width="5"/>
+    <circle cx="157" cy="130" r="13" fill="#06101b" stroke-width="5"/>
+    <circle cx="214" cy="171" r="13" fill="#06101b" stroke-width="5"/>
+    <path d="M214 171 L240 155 M214 171 L241 181" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(1080 133) scale(-1 1)" fill="none" stroke="url(#violet)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 208 L81 171 L137 213 L214 171" stroke-width="8"/>
+    <path d="M81 171 L104 93 L186 74 L214 171" stroke-width="11"/>
+    <path d="M104 93 L157 130" stroke-width="11"/>
+    <circle cx="81" cy="171" r="13" fill="#06101b" stroke-width="5"/>
+    <circle cx="104" cy="93" r="13" fill="#06101b" stroke-width="5"/>
+    <circle cx="157" cy="130" r="13" fill="#06101b" stroke-width="5"/>
+    <circle cx="214" cy="171" r="13" fill="#06101b" stroke-width="5"/>
+    <path d="M214 171 L240 155 M214 171 L241 181" stroke-width="5"/>
+  </g>
+
+  <g text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+    <text x="720" y="164" fill="#f3f8ff" font-size="17" font-weight="700" letter-spacing="6">XUN ZHAO</text>
+    <text x="720" y="219" fill="#ffffff" font-size="45" font-weight="700" letter-spacing="1">ROBOTICS · EMBODIED INTELLIGENCE</text>
+    <text x="720" y="259" fill="#a8c4de" font-size="18" letter-spacing="2">PERCEPTION  /  LEARNING  /  CONTROL  /  SIM-TO-REAL</text>
+  </g>
+
+  <g opacity=".75" fill="#8ee7ff">
+    <circle cx="351" cy="77" r="2"/><circle cx="389" cy="332" r="2"/><circle cx="1063" cy="89" r="2"/><circle cx="1027" cy="346" r="2"/>
+    <circle cx="305" cy="296" r="1.5"/><circle cx="1134" cy="284" r="1.5"/>
+  </g>
+</svg>
