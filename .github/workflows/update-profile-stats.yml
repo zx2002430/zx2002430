@@ -1,0 +1,65 @@
+name: Update profile statistics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and publish public stats card
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const username = "zx2002430";
+            const { data: user } = await github.rest.users.getByUsername({ username });
+            const repositories = await github.paginate(github.rest.repos.listForUser, {
+              username,
+              type: "owner",
+              per_page: 100,
+            });
+            const publicStars = repositories
+              .filter((repository) => !repository.private)
+              .reduce((total, repository) => total + repository.stargazers_count, 0);
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="540" height="228" viewBox="0 0 540 228" role="img" aria-labelledby="title desc">
+              <title id="title">${username}'s public GitHub statistics</title>
+              <desc id="desc">${user.public_repos} public repositories, ${user.followers} followers, ${publicStars} stars received, and ${user.public_gists} public gists.</desc>
+              <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d1726"/><stop offset="100%" stop-color="#151026"/></linearGradient></defs>
+              <rect width="540" height="228" rx="18" fill="url(#bg)"/><rect x="1" y="1" width="538" height="226" rx="17" fill="none" stroke="#303f56"/>
+              <circle cx="38" cy="38" r="7" fill="#58a6ff"/><text x="56" y="44" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Public GitHub Stats</text><text x="486" y="43" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="end">AUTO-UPDATED DAILY</text>
+              <g font-family="Arial, Helvetica, sans-serif"><rect x="28" y="70" width="232" height="62" rx="11" fill="#111f32"/><text x="47" y="96" fill="#8b949e" font-size="12">PUBLIC REPOSITORIES</text><text x="47" y="120" fill="#8ee7ff" font-size="24" font-weight="700">${user.public_repos}</text><rect x="280" y="70" width="232" height="62" rx="11" fill="#111f32"/><text x="299" y="96" fill="#8b949e" font-size="12">FOLLOWERS</text><text x="299" y="120" fill="#c3a6ff" font-size="24" font-weight="700">${user.followers}</text><rect x="28" y="147" width="232" height="62" rx="11" fill="#111f32"/><text x="47" y="173" fill="#8b949e" font-size="12">PUBLIC STARS</text><text x="47" y="197" fill="#f5d76e" font-size="24" font-weight="700">${publicStars}</text><rect x="280" y="147" width="232" height="62" rx="11" fill="#111f32"/><text x="299" y="173" fill="#8b949e" font-size="12">PUBLIC GISTS</text><text x="299" y="197" fill="#b2ffb2" font-size="24" font-weight="700">${user.public_gists}</text></g>
+            </svg>`;
+            const path = "assets/github-stats.svg";
+            let existing;
+            try {
+              existing = await github.rest.repos.getContent({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path,
+                ref: "main",
+              });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+            if (existing) {
+              const current = Buffer.from(existing.data.content, "base64").toString("utf8");
+              if (current === svg) {
+                core.info("Public statistics are unchanged.");
+                return;
+              }
+            }
+            await github.rest.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path,
+              message: "chore: refresh public GitHub stats [skip ci]",
+              content: Buffer.from(svg).toString("base64"),
+              branch: "main",
+              ...(existing ? { sha: existing.data.sha } : {}),
+            });
