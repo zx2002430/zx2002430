@@ -25,7 +25,7 @@ jobs:
 
       - name: Commit updated snake assets
         run: |
-          if git diff --quiet -- assets/contribution-snake.svg assets/contribution-snake-dark.svg; then
+          if [ -z "$(git status --porcelain -- assets/contribution-snake.svg assets/contribution-snake-dark.svg)" ]; then
             echo "Contribution snake is unchanged."
             exit 0
           fi
