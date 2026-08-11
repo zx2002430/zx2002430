@@ -17,16 +17,22 @@
 
 ## 👋 Hi, I'm Xun Zhao
 
-<img align="right" width="47%" src="./assets/github-stats.svg" alt="Xun Zhao's public GitHub statistics" />
-
-I am an **AI and robotics researcher** interested in making learned policies work beyond a simulation demo.
-
-- 🤖 Building coordinated robot systems for dynamic, shared workspaces
-- 🧠 Exploring embodied intelligence, VLA, meta-learning, and multi-agent RL
-- 🔭 Turning MuJoCo experiments into ROS 2-enabled real-robot deployments
-- 📍 Working from China · always open to thoughtful research conversations
-
-<br clear="right" />
+<table>
+  <tr>
+    <td width="53%" valign="top">
+      <p>I am an <strong>AI and robotics researcher</strong> interested in making learned policies work beyond a simulation demo.</p>
+      <ul>
+        <li>🤖 Building coordinated robot systems for dynamic, shared workspaces</li>
+        <li>🧠 Exploring embodied intelligence, VLA, meta-learning, and multi-agent RL</li>
+        <li>🔭 Turning MuJoCo experiments into ROS 2-enabled real-robot deployments</li>
+        <li>📍 Working from China · always open to thoughtful research conversations</li>
+      </ul>
+    </td>
+    <td width="47%" valign="top">
+      <img src="./assets/github-stats.svg" width="100%" alt="Xun Zhao's public GitHub statistics" />
+    </td>
+  </tr>
+</table>
 
 ## 🧩 Research map
 
@@ -65,6 +71,16 @@ perceive the world  →  learn to adapt  →  act safely in the world
     </td>
   </tr>
 </table>
+
+## 🐍 Contribution snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zx2002430/zx2002430/main/assets/contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zx2002430/zx2002430/main/assets/contribution-snake.svg" />
+    <img alt="Animated snake eating Xun Zhao's GitHub contribution grid" src="https://raw.githubusercontent.com/zx2002430/zx2002430/main/assets/contribution-snake.svg" />
+  </picture>
+</p>
 
 ## 📫 Let’s connect
 
